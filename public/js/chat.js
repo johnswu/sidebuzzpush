@@ -3,7 +3,7 @@
 $(function(){
 
 	// getting the id of the room from the url
-	var id = Number(window.location.pathname.match(/\/chat\/(\d+)$/)[1]);
+	var id = Number(window.location.pathname.match(/\/event\/(\d+)$/)[1]);
 
 	// connect to the socket
 	var socket = io.connect('/socket');
@@ -34,9 +34,9 @@ $(function(){
 		hisName = $("#hisName"),
 		hisEmail = $("#hisEmail"),
 		chatForm = $("#chatform"),
-		textarea = $("#message"),
+		textarea = $("#btn-input"),
 		messageTimeSent = $(".timesent"),
-		chats = $(".chats");
+		chats = $(".chat");
 
 	// these variables hold images
 	var ownerImage = $("#ownerImage"),
@@ -60,6 +60,10 @@ $(function(){
 
 		if(data.number === 0){
 
+			// TEMP code for logging in
+			socket.emit('login', {user: 'John', avatar: 'john@johnwu.me', id: id});
+			
+			/* This will be filled in by OAuth eventually
 			showMessage("connected");
 
 			loginForm.on('submit', function(e){
@@ -87,10 +91,15 @@ $(function(){
 				}
 			
 			});
+			*/
 		}
 
 		else if(data.number === 1) {
 
+			// TEMP code for logging in
+			socket.emit('login', {user: 'John2', avatar: 'john_s_wu@hotmail.com', id: id});
+			
+			/* This will be filled in by OAuth eventually
 			showMessage("personinchat",data);
 
 			loginForm.on('submit', function(e){
@@ -119,6 +128,7 @@ $(function(){
 				}
 
 			});
+			*/
 		}
 
 		else {
@@ -184,7 +194,7 @@ $(function(){
 
 	});
 
-	chatForm.on('submit', function(e){
+	$('#btn-chat').on('click', function(e){
 
 		e.preventDefault();
 
@@ -216,7 +226,6 @@ $(function(){
 	// Function that creates a new chat message
 
 	function createChatMessage(msg,user,imgg,now){
-
 		var who = '';
 
 		if(user===name) {
@@ -226,7 +235,25 @@ $(function(){
 			who = 'you';
 		}
 
+		console.log("received a message");
 		var li = $(
+			'<li class="left clearfix">' +
+				'<span class="chat-img pull-left">' +
+					'<img src="http://placehold.it/50/55C1E7/fff" alt="User Avatar" class="img-circle" />' +
+				'</span>' +
+				'<div class="chat-body clearfix">' +
+					'<div class="header">' +
+						'<strong class="primary-font">Jack Sparrow</strong>' +
+						'<small class="pull-right text-muted">' +
+							'<i class="fa fa-clock-o fa-fw"></i> 12 mins ago' +
+						'</small>' +
+					'</div>' +
+					'<p>' +
+						'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales.' +
+					'</p>' +
+				'</div>' +
+			'</li>'
+			/*
 			'<li class=' + who + '>'+
 				'<div class="image">' +
 					'<img src=' + imgg + ' />' +
@@ -234,7 +261,9 @@ $(function(){
 					'<i class="timesent" data-time=' + now + '></i> ' +
 				'</div>' +
 				'<p></p>' +
-			'</li>');
+			'</li>'
+			*/
+			);
 
 		// use the 'text' method to escape malicious user input
 		li.find('p').text(msg);

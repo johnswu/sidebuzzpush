@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/assets/ico/favicon.ico">
+
+    <title>Side Buzz: Your Second Screen for Live Events</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/font-awesome.css" rel="stylesheet">
+	<link href="/css/bootstrap-social.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="/css/carousel.css" rel="stylesheet">
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+        <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" style="padding:6px;" href="#"><img src="/images/sidebuzz-logo.png" /></a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="/images/header.jpg" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Your second screen for live events.</h1>
+              <p>Enhanced conference engagement with a second window into reality</p>
+              <p><a class="btn btn-lg btn-primary btn-social btn-facebook" href="/facebook_login.php" role="button"><i class="fa fa-facebook"></i> Sign in with Facebook</a></p>
+              <p><a class="btn btn-lg btn-primary btn-social btn-linkedin" href="/linkedin_login.php" role="button"><i class="fa fa-linkedin"></i> Sign in with LinkedIn</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="/images/conference-hall.jpg" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Bring conferences to a new level of interaction</h1>
+              <p>Conferences shouldn't be a one way interaction.  Receive and act on live feedback from your customers, while giving them new options for responding.</p>
+              <p><a class="btn btn-lg btn-primary btn-social btn-facebook" href="/facebook_login.php" role="button"><i class="fa fa-facebook"></i> Sign in with Facebook</a></p
+              <p><a class="btn btn-lg btn-primary btn-social btn-linkedin" href="/linkedin_login.php" role="button"><i class="fa fa-linkedin"></i> Sign in with LinkedIn</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="/images/header-3.jpg" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Get visibility into your audience</h1>
+              <p>Maximize your revenue and profit with analytic details about your audience and their behaviors for both yourself and your sponsors.</p>
+              <p><a class="btn btn-lg btn-primary btn-social btn-facebook" href="/facebook_login.php" role="button"><i class="fa fa-facebook"></i> Sign in with Facebook</a></p
+              <p><a class="btn btn-lg btn-primary btn-social btn-linkedin" href="/linkedin_login.php" role="button"><i class="fa fa-linkedin"></i> Sign in with LinkedIn</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div><!-- /.carousel -->
+
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="img-circle" src="/images/icon01.png" alt="Generic placeholder image">
+          <h2>Enable Powerful Experiences</h2>
+          <p>Enhance user engagement and idea-sharing with interactive presentations and professional networking.</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="/images/icon02.png" alt="Generic placeholder image">
+          <h2>Make Informed Decisions</h2>
+          <p>Generate reports on user demographics, allowing you to better serve your customers, partners, and employees.</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="/images/icon04.png" alt="Generic placeholder image">
+          <h2>Grow Event Revenue</h2>
+          <p>Drive event sponsorships, elevate sponsor branding and deliver more leads to your exhibitors.</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Interactive Presentations. <span class="text-muted">It'll blow your mind.</span></h2>
+          <p class="lead">Enhance user engagement with interactive presentations.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" src="/images/microphone.jpg" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" src="/images/wordcloud.JPG" alt="Generic placeholder image">
+        </div>
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Online Conversation <span class="text-muted">See for yourself.</span></h2>
+          <p class="lead">Drive idea-sharing among users with online communication platform.</p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Professional Networking <span class="text-muted">Checkmate.</span></h2>
+          <p class="lead">Provide opportunities for users to connect with user directory.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" src="/images/peoplenetwork.jpg" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2014 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/docs.min.js"></script>
+  </body>
+</html>

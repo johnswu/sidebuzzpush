@@ -14,7 +14,27 @@ module.exports = function(app,io){
 	app.get('/', function(req, res){
 
 		// Render views/home.html
-		res.render('home');
+		res.render('index');
+	});
+	
+	app.get('/createevent', function(req,res){
+		// Render the create event page
+		// Allow users to upload a powerpoint file
+		// Generate a random string for the event URL
+		var EventID = Math.round((Math.random() * 1000000));
+		
+		// upload a PowerPoint file to Amazon S3
+		
+		// wait for the PowerPoint file to be converted
+		
+		// redirect the user to the new event room
+		res.redirect('/event/'+EventID);
+	});
+	
+	app.get('/event/:eventname', function(req,res){
+		
+		// Render the event hosting interface
+		res.render('event');
 	});
 
 	app.get('/create', function(req,res){
@@ -28,7 +48,7 @@ module.exports = function(app,io){
 
 	app.get('/chat/:id', function(req,res){
 
-		// Render the chant.html view
+		// Render the chat.html view
 		res.render('chat');
 	});
 
