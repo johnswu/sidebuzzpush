@@ -1,36 +1,96 @@
-<!doctype html>
-<html>
-<head>
-	<title>Create an event</title>
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
-	<style>
-		body 		{ padding-top:80px; }
-	</style>
-</head>
-<body>
-<div class="container">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Event: Seattle Startup Weekend</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rebound - Responsive Portfolio Theme for Twitter Bootstrap. Responsive HTML5, CSS3 and jQuery.">
+    <meta name="author" content="Pukeko Design Studio">
 
-<div class="col-sm-6 col-sm-offset-3">
+    <!-- STYLES -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<link href="/css/bootstrap-social.css" rel="stylesheet">
+    <!--[if IE 7]>
+      <link rel="stylesheet" href="css/font-awesome-ie7.min.css">
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
 
-	<h1><span class="fa fa-sign-in"></span> Signup</h1>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="js/respond.src.js"></script>
+    <![endif]-->
 
-	<!-- show any messages that come back with authentication -->
-	<% if (message.length > 0) { %>
-		<div class="alert alert-danger"><%= message %></div>
-	<% } %>
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/sample/logo-144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/sample/logo-114.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/sample/logo-72.png">
+                    <link rel="apple-touch-icon-precomposed" href="img/sample/logo-57.png">
+                                   <link rel="shortcut icon" href="img/sample/logo.png">
+    
+  </head>
 
-	<!-- CREATE EVENT FORM -->
-	<form action="/createevent" method="post">
-		<div class="form-group">
-			<label>Event Title</label>
-			<input type="text" class="form-control" name="eventTitle">
-		</div>
-		<div class="form-group">
-			<label>Powerpoint File</label>
-			<input type="file" class="form-control" name="powerPoint">
-		</div>
+  <body>
+  
+    <div class="wrapper">
+      <div class="row">
+        <div class="col-md-3 sidebar">
+		<% include /templates/sidebar %>
+        </div><!-- end col -->
+        <div class="col-md-9 content portfolio item">
+          <div class="page">
+            <article>
+              <div class="page-header">
+                <h1>Create an Event</h1>
+                <p class="lead">Enter details to create an event blah blah blah</p>
+              </div><!-- end page-header -->
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="post-content">
+					<form action="createevent" method="post">
+						<table>
+							<tr>
+								<td>Event Name:</td>
+								<td><input type="text" name="EventName" /></td>
+							<tr>
+							<tr>
+								<td>Content Type:</td>
+								<td>
+									<select>
+										<option>PowerPoint Deck</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Upload a PowerPoint Deck:</td>
+								<td><input type="file" name="PowerPointFile" /></td>
+							<tr>
+						</table>
+						<br/><br/>
+						<input type="submit" name="Submit" text="Submit" />
+					</form>
+                  </div><!-- end col -->
+                </div><!-- end row -->
+              </div><!-- end post-content -->
+            </article>
+          </div><!-- end post -->
+        </div><!-- end col -->
+      </div><!-- end row -->
+    </div><!-- end wrapper -->
+    
+    <footer class="hidden-xs">
+      <p class="pull-left">&copy; Copyright 2014. Rebound.</p>
+      <p class="pull-right"><a href="#none">Rebound</a> by Pukeko Design Studio. <a href="documentation.html">Documentation</a>.</p>
+    </footer>
+    
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/rebound.js"></script>
 
-		<button type="submit" class="btn btn-warning btn-lg">Signup</button>
-	</form>
-
+  </body>
+</html>

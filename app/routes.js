@@ -14,7 +14,38 @@ module.exports = function(app, io, passport){
 	app.get('/', function(req, res){
 
 		// Render views/home.html
-		res.render('index');
+		res.render('index', {
+			user : req.user // get the user out of session and pass to template
+		});
+	});
+	
+	app.get('/createevent', function(req,res){
+		// Render the create event page
+		// Allow users to upload a powerpoint file
+		
+		// Render views/home.html
+		res.render('createevent', {
+			user : req.user // get the user out of session and pass to template
+		});
+	});
+	
+	app.get('/event-item', function(req,res){
+		
+		// Render views/home.html
+		res.render('event-item', {
+			user : req.user // get the user out of session and pass to template
+		});
+	});
+
+	// =====================================
+	// TEMPLATES
+	// =====================================
+	app.get('/templates/sidebar', function(req, res){
+	
+		// Render views/templates/sidebar.ejs
+		res.render('templates/sidebar', {
+			user : req.user // get the user out of session and pass to template
+		});
 	});
 
 	// =====================================
@@ -26,7 +57,7 @@ module.exports = function(app, io, passport){
 	// handle the callback after facebook has authenticated the user
 	app.get('/auth/facebook/callback',
 		passport.authenticate('facebook', {
-			successRedirect : '/profile',
+			successRedirect : '/',
 			failureRedirect : '/'
 		}));
 
@@ -80,12 +111,6 @@ module.exports = function(app, io, passport){
 		res.redirect('/');
 	});
 	
-	app.get('/createevent', function(req,res){
-		// Render the create event page
-		// Allow users to upload a powerpoint file
-		
-	});
-	
 	app.post('/createevent', function(req,res){
 	
 		// upload a PowerPoint file to Amazon S3
@@ -102,12 +127,6 @@ module.exports = function(app, io, passport){
 		
 		// Render the event hosting interface
 		res.render('event');
-	});
-
-	app.get('/event-item', function(req,res){
-		
-		// Render the event hosting interface
-		res.render('event-item');
 	});
 
 	app.get('/create', function(req,res){

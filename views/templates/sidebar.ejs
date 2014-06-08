@@ -1,0 +1,46 @@
+          <div class="navbar" role="navigation">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#rebound-navbar-collapse"><span class="fa fa-bars"></span> Menu</button>
+              <a href="/" class="navbar-brand"><img src="/images/sidebuzz-logo.png" /></a>
+              <p class="brand-text">Your Second Screen for Live Events</p>
+			  <% if (user) { %>
+              <p><a class="btn btn-lg btn-primary btn-social btn-facebook" href="/logout" role="button"><i class="fa fa-facebook"></i> Sign out</a></p>
+			  <% } else { %>
+              <p><a class="btn btn-lg btn-primary btn-social btn-facebook" href="/auth/facebook" role="button"><i class="fa fa-facebook"></i> Sign in with Facebook</a></p>
+			  <% } %>
+            </div><!-- end navbar-header -->
+            <div class="collapse navbar-collapse" id="rebound-navbar-collapse">
+              <ul class="nav navbar-nav">
+                <li class="title">Menu</li>
+                <li class="active"><a href="/">Home</a></li>
+				<% if (user) { %>
+				<li><a href="/profile">Profile</a></li>
+				<li><a href="/createevent">Create an Event</a></li>
+				<% } %>
+                <li><a href="about.html">What is Side.Buzz?</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+              <form class="navbar-form" role="search">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search" value="" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="button"><span class="fa fa-search"></span></button>
+                  </span>
+                </div><!-- end input group -->
+              </form><!-- end navbar-form -->
+              <ul class="nav navbar-nav filter-portfolio">
+                <li class="title">Work</li>
+                <li class="active"><a href="#none" data-filter="*">All</a> <span>(123)</span></li>
+                <li><a href="#none" data-filter=".film">Film</a> <span>(9)</span></li>
+                <li><a href="#none" data-filter=".music">Music</a> <span>(22)</span></li>
+                <li><a href="#none" data-filter=".art">Art</a> <span>(7)</span></li>
+                <li><a href="#none" data-filter=".social">Social</a> <span>(49)</span></li>
+              </ul>
+              <ul class="nav navbar-nav nav-social hidden-sm hidden-xs">
+                <li class="title">Connect With Us</li>
+                <li><a href="#none">Twitter</a></li>
+                <li><a href="#none">Facebook</a></li>
+                <li><a href="#none">LinkedIn</a></li>
+              </ul>
+            </div><!-- end navbar-collapse -->
+          </div><!-- end navbar -->
