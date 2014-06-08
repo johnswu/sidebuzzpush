@@ -10,6 +10,7 @@
     <!-- Le styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<link href="/css/bootstrap-social.css" rel="stylesheet">
     <!--[if IE 7]>
       <link rel="stylesheet" href="css/font-awesome-ie7.min.css">
     <![endif]-->
@@ -32,24 +33,6 @@
 
   <body>
 
-	<div class="navbar navbar-default navbar-fixed-top">
-		<div class="navbar-header"><a class="navbar-brand" href="#">Brand</a>
-		  <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		  </a>
-		</div>
-		<div class="navbar-collapse collapse">
-		  <ul class="nav navbar-nav">
-			<li class="active"><a href="#">Home</a></li>
-			<li><a href="#">Link</a></li>
-			<li><a href="#">More</a></li>
-			<li><a href="#">Options</a></li>
-		  </ul>
-		</div>
-	</div>
-  
     <div class="wrapper">
       <div class="row">
         <div class="col-md-3 sidebar">
@@ -58,20 +41,15 @@
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#rebound-navbar-collapse"><span class="fa fa-bars"></span> Menu</button>
               <a href="/" class="navbar-brand"><img src="/images/sidebuzz-logo.png" /></a>
               <p class="brand-text">Your Second Screen for Live Events</p>
+              <p><a class="btn btn-lg btn-primary btn-social btn-facebook" href="/auth/facebook" role="button"><i class="fa fa-facebook"></i> Sign in with Facebook</a></p>
+              <p><a class="btn btn-lg btn-primary btn-social btn-linkedin" href="#" role="button"><i class="fa fa-linkedin"></i> Sign in with LinkedIn</a></p>			  
             </div><!-- end navbar-header -->
             <div class="collapse navbar-collapse" id="rebound-navbar-collapse">
               <ul class="nav navbar-nav">
                 <li class="title">Menu</li>
                 <li class="active"><a href="/">Home</a></li>
-                <li><a href="about.html">About</a></li>
-				<!--
-                <li><a href="hire.html">Hire Me</a></li>
-                <li><a href="blog-parent.html">Blog</a></li>
-				-->
+                <li><a href="about.html">What is Side.Buzz?</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="elements.html">UI Elements</a></li>
-                <li><a href="forms.html">Form Elements</a></li>
-                <li><a href="typography.html">Tables &amp; Typography</a></li>
               </ul>
               <form class="navbar-form" role="search">
                 <div class="input-group">
@@ -90,11 +68,10 @@
                 <li><a href="#none" data-filter=".social">Social</a> <span>(49)</span></li>
               </ul>
               <ul class="nav navbar-nav nav-social hidden-sm hidden-xs">
-                <li class="title">Social</li>
+                <li class="title">Connect With Us</li>
                 <li><a href="#none">Twitter</a></li>
                 <li><a href="#none">Facebook</a></li>
                 <li><a href="#none">LinkedIn</a></li>
-                <li><a href="#none">Dribbble</a></li>
               </ul>
             </div><!-- end navbar-collapse -->
           </div><!-- end navbar -->
@@ -102,14 +79,14 @@
         <div class="col-md-9 content">
           <div class="portfolio-wrapper">
             <div class="card film art">
-              <a href="event-item.php" class="thumb">
+              <a href="event-item" class="thumb">
                 <img src="/ssw/images/header.jpg" alt="" title="" />
                 <span class="overlay"><span class="fa fa-search"></span></span>
               </a>
               <div class="card-body">
-                <h2><a href="event-item.php">Seattle Startup Weekend</a></h2>
+                <h2><a href="event-item">Seattle Startup Weekend</a></h2>
                 <p>Seattle will be hosting truly a unique event kicking off on May 16th. Startup Weekend and 9Mile Labs are coming together to host one of the world's first B2B Startup Weekend!</p>
-                <p><a href="event-item.php">Read More</a></p>
+                <p><a href="event-item">Read More</a></p>
               </div><!-- end card-body -->
               <div class="card-footer">
                 <ul class="list-inline filters">
@@ -256,8 +233,8 @@
     </div><!-- end wrapper -->
     
     <footer class="hidden-xs">
-      <p class="pull-left">&copy; Copyright 2014. Rebound.</p>
-      <p class="pull-right"><a href="#none">Rebound</a> by Pukeko Design Studio. <a href="documentation.html">Documentation</a>.</p>
+      <p class="pull-left">&copy; Copyright 2014. SideBuzz.</p>
+      <p class="pull-right"></p>
     </footer>
     
     <!-- Le javascript

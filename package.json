@@ -1,22 +1,24 @@
 {
-  "name": "NodeChatSystem",
+  "name": "SideBuzz",
   "version": "0.0.1",
-  "description": "Realtime chat system for Tutorialzine.com",
-  "main": "app.js",
+  "description": "SideBuzz",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "node",
-    "chat",
-    "system"
-  ],
-  "author": "Nikolay Anastasov",
-  "license": "MIT",
+  "author": "John Wu",
   "dependencies": {
     "express": "~3.5.0",
     "gravatar": "~1.0.6",
     "socket.io": "~0.9.16",
-    "ejs": "~0.8.5"
+    "ejs": "~0.8.5",
+    "mongoose" : "~3.8.1", 			
+    "passport" : "~0.1.17", 		
+    "passport-local" : "~0.1.6", 	
+    "passport-facebook" : "~1.0.2", 
+    "passport-twitter" : "~1.0.2", 	
+    "passport-google-oauth" : "~0.1.5",
+    "connect-flash" : "~0.1.1", 	
+    "bcrypt-nodejs" : "latest" 		
   }
 }
