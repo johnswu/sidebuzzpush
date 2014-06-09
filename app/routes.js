@@ -156,7 +156,6 @@ module.exports = function(app, io, passport){
 		res.render('chat');
 	});
 
-	/*
 	// Initialize a new socket.io application, named 'chat'
 	var chat = io.of('/socket').on('connection', function (socket) {
 
@@ -258,7 +257,6 @@ module.exports = function(app, io, passport){
 			socket.broadcast.to(socket.room).emit('receive', {msg: data.msg, user: data.user, img: data.img});
 		});
 	});
-		*/
 };
 
 // route middleware to make sure a user is logged in
