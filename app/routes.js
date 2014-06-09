@@ -245,8 +245,8 @@ module.exports = function(app, io, passport){
 			// When the server receives a message, it sends it to the other person in the room.
 			socket.broadcast.to(socket.room).emit('receive', {msg: data.msg, user: data.user, img: data.img});
 		});
-		*/
 	});
+		*/
 };
 
 // route middleware to make sure a user is logged in
