@@ -10,7 +10,7 @@ var mongoose = require('mongoose');
 var passport = require('passport');
 var flash 	 = require('connect-flash');
 var logfmt = require("logfmt");
-var io = require('socket.io').listen(app.listen(socketIOPort));
+var io = true; //require('socket.io').listen(app.listen(socketIOPort));
 
 var configDB = require('./config/database.js');
 
