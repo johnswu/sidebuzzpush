@@ -5,6 +5,7 @@
 // Use the gravatar module, to turn email addresses into avatar images:
 
 var gravatar = require('gravatar');
+var Event = require('../app/models/event');
 
 // Export a function, so that we can pass 
 // the app and io instances from the app.js file:
@@ -29,11 +30,34 @@ module.exports = function(app, io, passport){
 		});
 	});
 	
-	app.get('/event-item', function(req,res){
+	app.post('/createevent', function(req,res){
+	
+		// create an event entry
+		var newEvent = new Event();
+		console.log(req.param('EventName'));
+		newEvent.eventName = req.param('EventName');
 		
-		// Render views/home.html
-		res.render('event-item', {
-			user : req.user // get the user out of session and pass to template
+		newEvent.save(function (err, newEvent) {
+			if (err) return console.error(err);
+		});
+		
+		// redirect the user to the new event room
+		res.redirect('/event-item/'+newEvent._id);
+	});
+	
+	app.get('/event-item/:eventID', function(req,res){
+		
+		// find the event referred to by eventID
+		Event.findOne({ _id : req.params.eventID }, function (err, myEvent) {
+			if (err) return console.log(err);
+			
+			console.log(myEvent.eventName);
+			
+			// Render views/home.html
+			res.render('event-item', {
+				user : req.user, // get the user out of session and pass to template
+				event : myEvent
+			});
 		});
 	});
 
@@ -109,18 +133,6 @@ module.exports = function(app, io, passport){
 	app.get('/logout', function(req, res) {
 		req.logout();
 		res.redirect('/');
-	});
-	
-	app.post('/createevent', function(req,res){
-	
-		// upload a PowerPoint file to Amazon S3
-		
-		// wait for the PowerPoint file to be converted
-		
-		// Generate a random string for the event URL
-		var EventID = Math.round((Math.random() * 1000000));
-		// redirect the user to the new event room
-		res.redirect('/event/'+EventID);
 	});
 	
 	app.get('/event/:eventname', function(req,res){

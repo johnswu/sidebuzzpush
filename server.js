@@ -4,13 +4,13 @@
 // get all the tools we need
 var express  = require('express');
 var app      = express();
-var port     = process.env.PORT || 8080;
+var port     = process.env.PORT || 5000;
 var socketIOPort     = process.env.PORT || 8090;
 var mongoose = require('mongoose');
 var passport = require('passport');
 var flash 	 = require('connect-flash');
 var logfmt = require("logfmt");
-var io = 1; // require('socket.io').listen(app.listen(socketIOPort));
+var io = require('socket.io').listen(app.listen(socketIOPort));
 
 var configDB = require('./config/database.js');
 
