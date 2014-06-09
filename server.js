@@ -9,7 +9,7 @@ var socketIOPort     = process.env.PORT || 8090;
 var mongoose = require('mongoose');
 var passport = require('passport');
 var flash 	 = require('connect-flash');
-var io = require('socket.io').listen(app.listen(socketIOPort));
+var io = 1; // require('socket.io').listen(app.listen(socketIOPort));
 
 var configDB = require('./config/database.js');
 
