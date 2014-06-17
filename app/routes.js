@@ -72,6 +72,24 @@ module.exports = function(app, io, passport){
 		});
 	});
 
+	// Participate in the actual event
+	app.get('/event/:eventID', function(req,res){
+		
+		// find the event referred to by eventID
+		Event.findOne({ _id : req.params.eventID }, function (err, myEvent) {
+			if (err) return console.log(err);
+			
+			console.log("Entering: " + myEvent.eventName);
+			
+		// Render the event hosting interface
+			// Render views/home.html
+			res.render('event', {
+				user : req.user, // get the user out of session and pass to template
+				event : myEvent
+			});
+		});
+	});
+
 	// =====================================
 	// TEMPLATES
 	// =====================================
@@ -146,12 +164,6 @@ module.exports = function(app, io, passport){
 		res.redirect('/');
 	});
 	
-	app.get('/event/:eventname', function(req,res){
-		
-		// Render the event hosting interface
-		res.render('event');
-	});
-
 	app.get('/create', function(req,res){
 
 		// Generate unique id for the room

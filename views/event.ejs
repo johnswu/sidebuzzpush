@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Side.Buzz - Seattle Startup Weekend</title>
+		<title>Side.Buzz - <%= event.eventName %></title>
 		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 		<script src="http://js.pusher.com/2.2/pusher.min.js"></script>
@@ -22,7 +22,7 @@
 		<div class="wrapper jsc-sidebar-content jsc-sidebar-pulled">
 			<!-- <nav> -->
 				<a href="#" class="icon-menu link-menu jsc-sidebar-trigger" style="text-decoration:none;"></a>
-				<div class="eventTitle"> - Seattle Startup Weekend</div>
+				<div class="eventTitle"> - <%= event.eventName %></div>
 				<img style="float:right;height:35px;" src="" />
 			<!-- </nav> -->
 			<section class="main-content">
