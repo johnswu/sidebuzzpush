@@ -14,9 +14,20 @@ module.exports = function(app, io, passport){
 
 	app.get('/', function(req, res){
 
-		// Render views/home.html
-		res.render('index', {
-			user : req.user // get the user out of session and pass to template
+		//var EventModel = new Event();
+		var eventsCollection = "";
+		
+		// Get all events
+		Event.find(function(err, eventsCollection) {
+		  if (err) {return console.error(err);}
+		  
+		  console.log(eventsCollection);
+		
+			// Render views/home.html
+			res.render('index', {
+				user : req.user, // get the user out of session and pass to template
+				Events : eventsCollection
+			});
 		});
 	});
 	

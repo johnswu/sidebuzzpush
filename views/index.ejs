@@ -40,15 +40,17 @@
         </div><!-- end col -->
         <div class="col-md-9 content">
           <div class="portfolio-wrapper">
+		  
+		  <% Events.forEach(function(event) { %>
             <div class="card film art">
-              <a href="event-item" class="thumb">
+              <a href="event-item/<%= event._id %>" class="thumb">
                 <img src="/ssw/images/header.jpg" alt="" title="" />
                 <span class="overlay"><span class="fa fa-search"></span></span>
               </a>
               <div class="card-body">
-                <h2><a href="event-item">Seattle Startup Weekend</a></h2>
+                <h2><a href="event-item/<%= event._id %>"><%= event.eventName %></a></h2>
                 <p>Seattle will be hosting truly a unique event kicking off on May 16th. Startup Weekend and 9Mile Labs are coming together to host one of the world's first B2B Startup Weekend!</p>
-                <p><a href="event-item">Read More</a></p>
+                <p><a href="event-item/<%= event._id %>">Read More</a></p>
               </div><!-- end card-body -->
               <div class="card-footer">
                 <ul class="list-inline filters">
@@ -57,6 +59,7 @@
                 </ul>
               </div><!-- end card-footer -->
             </div><!-- end card -->
+		  <% }); %>
 			<!--
             <div class="card music social">
               <a href="portfolio-item.html" class="thumb">
